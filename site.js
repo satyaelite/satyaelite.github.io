@@ -1,28 +1,9 @@
-(function( site, undefined ) {
-
-    timeout = 400;
-
- 
-    site.partypartyparty = function(e) {
-	var partyers = document.getElementsByClassName('party');
-	for(var i=0; i<partyers.length; i++) {
-            var r = Math.floor(Math.random()*255);
-            var g = Math.floor(Math.random()*255);
-            var b = Math.floor(Math.random()*255);
-            var e = partyers[i];
-	    e.style.setProperty('color', 'rgb('+ r +','+ g +',' + b + ')');
-
-	    if (Math.random()*100 > 99) {
-		e.innerText = 'PARTY! PARTY! PARTY!';
-	    }
-	    
-	    this.timeout = Math.max(this.timeout * 0.9, 50);
-	}
-
-        window.setTimeout(site.partypartyparty, this.timeout);
-    };
-
-}( window.site = window.site || {} ));
-
-site.partypartyparty();
-
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
